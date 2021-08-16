@@ -11,24 +11,31 @@ const StyledHeader = styled.div`
 `
 
 const TickerInput = styled.input`
-    min-width: 180px;
+    min-width: 300px;
     outline: none;
-    height: 54px;
+    height: 70px;
     padding: 0px 32px;
     font-size: 18px;
-    border: 1px solid black;
+    border: none;
     border-radius: 20px 0 0 20px;
+    color: black;
+    background-color: #e6e6e6;
 `
 const TickerSubmitButton = styled.input`
-    min-width: 100px;
+    position: relative;
+    min-width: 150px;
+    /* left: 500px; */
     outline: none;
-    height: 56px;
+    height: 70px;
     padding: 0px 32px;
     font-size: 18px;
     border: none;
     color: white;
-    background-color: #1e9eff;
+    background-color: #2f82ff;
     border-radius: 0 20px 20px 0;
+    /* border: 1px solid black; */
+    font-weight: 900;
+    font-family: sans-serif;
 `
 const Title = styled.h1`
     font-size: 90px;
@@ -48,7 +55,7 @@ const Header = () => {
                 <TickerInput
                     type="text"
                     name="ticker"
-                    placeholder="Enter Ticker Symbol"
+                    placeholder="Enter Ticker Symbol (ex. AAPL)"
                 />
                 <TickerSubmitButton
                     type="submit"
