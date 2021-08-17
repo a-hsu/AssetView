@@ -1,9 +1,5 @@
 import styled from "@emotion/styled"
 
-interface LinkProps {
-    href: string
-}
-
 const Nav = styled.div`
     position: fixed;
     background-color: #ffffff;
