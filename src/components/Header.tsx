@@ -11,7 +11,7 @@ const StyledHeader = styled.div`
 `
 
 const TickerInput = styled.input`
-    min-width: 300px;
+    min-width: 350px;
     outline: none;
     height: 70px;
     padding: 0px 32px;

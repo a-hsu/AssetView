@@ -2,10 +2,8 @@ import styled from "@emotion/styled"
 
 const StyledFooter = styled.div`
     width: 100%;
-    height: 100px;
-    display: grid;
-    grid-template-columns: 3;
-    grid-template-rows: 3;
+    height: 50px;
+    background-color: #888888;
 `
 const Footer = () => {
     return (
