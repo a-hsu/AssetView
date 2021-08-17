@@ -1,28 +1,5 @@
 import styled from "@emotion/styled"
-
-const Nav = styled.div`
-    position: fixed;
-    background-color: #ffffff;
-    height: 75px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-`
-const Title = styled.h2`
-    font-weight: 300;
-    margin-left: 20px;
-
-    background-image: linear-gradient(90deg, #5e83fc, #4cd9eb);
-    background-size: 0% 3px;
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    transition: background-size 250ms ease;
-
-    &:hover {
-        background-size: 100% 3px;
-    }
-`
+import { Nav, NavTitle } from "./NavbarElements"
 
 const LinkBar = styled.div`
     display: flex;
@@ -31,7 +8,6 @@ const LinkBar = styled.div`
     justify-content: space-around;
     padding-right: 15px;
     align-items: center;
-    
 `
 const LinkItem = styled.li`
     list-style: none;
@@ -68,7 +44,7 @@ const Login = styled.button`
 const Navbar = () => {
     return (
         <Nav>
-            <Title>AssetView</Title>
+            <NavTitle>AssetView</NavTitle>
             <LinkBar>
                 <LinkItem href="#Stocks">Stocks</LinkItem>
                 <LinkItem href="#Crypto">Crypto</LinkItem>

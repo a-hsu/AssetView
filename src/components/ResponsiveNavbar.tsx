@@ -31,7 +31,7 @@ const LinkBar = styled.div`
     justify-content: space-around;
     padding-right: 15px;
     align-items: center;
-    
+
 `
 const LinkItem = styled.li`
     list-style: none;
@@ -65,7 +65,7 @@ const Login = styled.button`
     }
 `
 
-const Navbar = () => {
+const ResponsiveNavbar = () => {
     return (
         <Nav>
             <Title>AssetView</Title>
@@ -78,4 +78,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default ResponsiveNavbar

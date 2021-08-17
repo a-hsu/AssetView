@@ -47,6 +47,8 @@ const HeaderInput = styled.div`
     justify-content: center;
 `
 
+
+
 const Header = () => {
     return (
         <StyledHeader>
