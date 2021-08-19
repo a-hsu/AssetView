@@ -36,6 +36,14 @@ const TickerSubmitButton = styled.input`
     /* border: 1px solid black; */
     font-weight: 900;
     font-family: sans-serif;
+
+    transition: 180ms ease;
+
+    &:hover {
+        background-color: #6da2e3;
+        cursor: pointer;
+    }
+
 `
 const Title = styled.h1`
     font-size: 90px;
@@ -47,9 +55,10 @@ const HeaderInput = styled.div`
     justify-content: center;
 `
 
-
-
 const Header = () => {
+    const handleSubmit = () => {
+        
+    }
     return (
         <StyledHeader>
             <Title>Getting Started</Title>
@@ -63,6 +72,7 @@ const Header = () => {
                     type="submit"
                     name="ticker"
                     placeholder="Search Ticker"
+                    onClick={handleSubmit}
                 />
             </HeaderInput>
         </StyledHeader>
