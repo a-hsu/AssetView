@@ -3,7 +3,7 @@ import "./App.css"
 import Navbar from "./components/Navbar"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-import SingleStock from "./components/SingleStock"
+
 
 function App(props: any) {
     return (
