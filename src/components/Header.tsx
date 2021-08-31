@@ -8,6 +8,7 @@ const StyledHeader = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: 10px;
 `
 
 const TickerInput = styled.input`
@@ -15,7 +16,7 @@ const TickerInput = styled.input`
     outline: none;
     height: 70px;
     padding: 0px 32px;
-    font-size: 18px;
+    font-size: 1.8em;
     border: none;
     border-radius: 20px 0 0 20px;
     color: black;
@@ -28,7 +29,7 @@ const TickerSubmitButton = styled.input`
     outline: none;
     height: 70px;
     padding: 0px 32px;
-    font-size: 18px;
+    font-size: 1.8em;
     border: none;
     color: white;
     background-color: #2f82ff;
@@ -43,10 +44,9 @@ const TickerSubmitButton = styled.input`
         background-color: #6da2e3;
         cursor: pointer;
     }
-
 `
 const Title = styled.h1`
-    font-size: 90px;
+    font-size: 8em;
 `
 const HeaderInput = styled.div`
     display: flex;
@@ -56,9 +56,7 @@ const HeaderInput = styled.div`
 `
 
 const Header = () => {
-    const handleSubmit = () => {
-        
-    }
+    const handleSubmit = () => {}
     return (
         <StyledHeader>
             <Title>Getting Started</Title>

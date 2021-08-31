@@ -1,5 +1,10 @@
 import styled from "@emotion/styled"
-
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    NavLink,
+} from "react-router-dom"
 const Nav = styled.div`
     position: fixed;
     background-color: #ffffff;
@@ -32,6 +37,23 @@ const LinkBar = styled.div`
     padding-right: 15px;
     align-items: center;
 
+    a {
+        text-decoration: none;
+    }
+
+    li {
+        color: red;
+        margin: 0 0.8rem;
+        font-size: 1.3rem;
+        position: relative;
+        list-style: none;
+    }
+
+    .current {
+        li {
+            border-bottom: 2px solid black;
+        }
+    }
 `
 const LinkItem = styled.li`
     list-style: none;
@@ -45,6 +67,7 @@ const LinkItem = styled.li`
 
     &:hover {
         background-size: 100% 3px;
+        cursor: pointer;
     }
 `.withComponent("a")
 
@@ -63,7 +86,6 @@ const Login = styled.button`
         background-color: #7da2e3;
         cursor: pointer;
     }
-    
 `
 
 const Navbar = () => {
@@ -71,8 +93,10 @@ const Navbar = () => {
         <Nav>
             <Title>AssetView</Title>
             <LinkBar>
-                <LinkItem href="#Stocks">Stocks</LinkItem>
-                <LinkItem href="#Crypto">Crypto</LinkItem>
+                <NavLink to="/stocks" activeClassName="current" exact>
+                    <LinkItem>Stocks</LinkItem>
+                </NavLink>
+                {/* <LinkItem to="#Crypto">Crypto</LinkItem> */}
                 <Login>Login</Login>
             </LinkBar>
         </Nav>
