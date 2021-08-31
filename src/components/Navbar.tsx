@@ -1,10 +1,5 @@
 import styled from "@emotion/styled"
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    NavLink,
-} from "react-router-dom"
+import { NavLink } from "react-router-dom"
 const Nav = styled.div`
     position: fixed;
     background-color: #ffffff;
