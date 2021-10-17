@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-
+import React, { useState } from "react"
 const StyledHeader = styled.div`
     background-color: #ffffff;
     height: 100vh;
@@ -56,7 +56,11 @@ const HeaderInput = styled.div`
 `
 
 const Header = () => {
-    const handleSubmit = () => {}
+    const [ticker, setTicker] = useState("")
+    const handleSubmit = (evt: any) => {
+        evt.preventDefault()
+        alert(`Submitting ${ticker}`)
+    }
     return (
         <StyledHeader>
             <Title>Getting Started</Title>
@@ -65,6 +69,7 @@ const Header = () => {
                     type="text"
                     name="ticker"
                     placeholder="Enter Ticker Symbol (ex. AAPL)"
+                    onChange={evt => setTicker(evt.target.value)}
                 />
                 <TickerSubmitButton
                     type="submit"
