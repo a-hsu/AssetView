@@ -88,8 +88,8 @@ const Navbar = () => {
         <Nav>
             <Title>AssetView</Title>
             <LinkBar>
-                <NavLink to="/stocks" activeClassName="current" exact>
-                    <LinkItem>Stocks</LinkItem>
+                <NavLink to="/watchlist" activeClassName="current" exact>
+                    <LinkItem>Watchlist</LinkItem>
                 </NavLink>
                 {/* <LinkItem to="#Crypto">Crypto</LinkItem> */}
                 <Login>Login</Login>

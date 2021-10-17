@@ -11,7 +11,7 @@ function App(props: any) {
                 <Route exact path="/">
                     <Home />
                 </Route>
-                <Route path="/stocks">
+                <Route path="/watchlist">
                     <Stocks />
                 </Route>
                 <Route path="/chart">
