@@ -66,9 +66,13 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 ### Tier List
 
-User Stories - [ ] Users should be able to look up any stock to receive data - [ ] Users can access
-Backend - [ ] "/stocks/ticker/[tickersymbol]" should make a call to the Finnhub API
-Frontend - [ ] A user should be able to type a ticker symbol from the home page or from the single stock page
+User Stories
+-[] Users should be able to look up any stock to receive data
+-[] Users can access
+Backend
+-[] "/stocks/ticker/[tickersymbol]" should make a call to the Finnhub API
+Frontend
+-[] A user should be able to type a ticker symbol from the home page or from the single stock page
 
 ### Useful resources
 
