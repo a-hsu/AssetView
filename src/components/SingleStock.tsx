@@ -16,7 +16,7 @@ const SingleStock = () => {
     }, [stock])
 
     const submitStock = (tickerSymbol: string) => {
-        console.log("hi")
+        console.log(tickerSymbol)
     }
     return (
         <div>

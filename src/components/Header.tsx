@@ -23,7 +23,7 @@ const Title = styled.h1`
 // `
 
 const submitStock = (tickerSymbol: string) => {
-    console.log("hi")
+    console.log(tickerSymbol)
 }
 const Header = () => {
     // const [ticker, setTicker] = useState("")
