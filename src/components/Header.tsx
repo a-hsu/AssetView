@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-import React from "react"
+import React, { useState } from "react"
 import StockSearch from "./StockSearch"
 const StyledHeader = styled.div`
     background-color: #ffffff;
@@ -15,26 +15,23 @@ const StyledHeader = styled.div`
 const Title = styled.h1`
     font-size: 8em;
 `
-// const HeaderInput = styled.div`
-//     display: flex;
-//     flex-direction: row;
-//     align-items: center;
-//     justify-content: center;
-// `
 
-const submitStock = (tickerSymbol: string) => {
-    console.log(tickerSymbol)
-}
 const Header = () => {
     // const [ticker, setTicker] = useState("")
     // const handleSubmit = (evt: any) => {
     //     evt.preventDefault()
     //     alert(`Submitting ${ticker}`)
     // }
+    const [ticker, setTicker] = useState("")
+    const submitStock = (tickerSymbol: string) => {
+        console.log(tickerSymbol)
+        setTicker(tickerSymbol)
+        // When this button is clicked, send the user to the single stock page "/stocks/ticker/${tickerSymbol}"
+    }
     return (
         <StyledHeader>
             <Title>Getting Started</Title>
-            <StockSearch submitStock={submitStock} />
+                <StockSearch submitStock={submitStock} />
         </StyledHeader>
     )
 }

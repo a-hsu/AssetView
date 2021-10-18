@@ -37,9 +37,9 @@ const LinkBar = styled.div`
     }
 
     li {
-        color: red;
+        /* color: red; */
         margin: 0 0.8rem;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         position: relative;
         list-style: none;
     }

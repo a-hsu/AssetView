@@ -4,6 +4,7 @@ import "./App.css"
 import Home from "./pages/Home"
 import Stocks from "./pages/Stocks"
 import Chart from "./pages/Chart"
+import SingleStock from "./components/SingleStock"
 function App(props: any) {
     return (
         <Router>
@@ -13,6 +14,9 @@ function App(props: any) {
                 </Route>
                 <Route path="/watchlist">
                     <Stocks />
+                </Route>
+                <Route path="/stocks/ticker">
+                    <SingleStock />
                 </Route>
                 <Route path="/chart">
                     <Chart />

@@ -12,7 +12,9 @@ const SingleStock = () => {
             const result = await axios(getFetchCompanyUrl(ticker))
             setStock(result.data)
         }
-        fetchData(ticker)
+        if (ticker.length != 0) {
+            fetchData(ticker)
+        }
     }, [stock])
 
     const submitStock = (tickerSymbol: string) => {
