@@ -1,5 +1,6 @@
 import axios from "axios"
 import React, { useState, useEffect } from "react"
+import StockSearch from "./StockSearch"
 const SingleStock = () => {
     const [stock, setStock] = useState({})
     const [ticker, setTicker] = useState("")
@@ -14,10 +15,13 @@ const SingleStock = () => {
         fetchData(ticker)
     }, [stock])
 
+    const submitStock = (tickerSymbol: string) => {
+        console.log("hi")
+    }
     return (
         <div>
             <h1>Single Stock Page</h1>
-            <h3>{ticker}</h3>
+            <StockSearch submitStock={submitStock} />
         </div>
     )
 }

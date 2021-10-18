@@ -22,6 +22,9 @@ const Title = styled.h1`
 //     justify-content: center;
 // `
 
+const submitStock = (tickerSymbol: string) => {
+    console.log("hi")
+}
 const Header = () => {
     // const [ticker, setTicker] = useState("")
     // const handleSubmit = (evt: any) => {
@@ -31,7 +34,7 @@ const Header = () => {
     return (
         <StyledHeader>
             <Title>Getting Started</Title>
-            <StockSearch />
+            <StockSearch submitStock={submitStock} />
         </StyledHeader>
     )
 }

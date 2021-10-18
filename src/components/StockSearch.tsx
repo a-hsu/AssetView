@@ -42,10 +42,16 @@ const HeaderInput = styled.div`
     justify-content: center;
 `
 
-const StockSearch = () => {
+const StockSearch = ({
+    submitStock,
+}: {
+    submitStock: (ticker: string) => void
+}) => {
     const [ticker, setTicker] = useState("")
     const handleSubmit = (evt: any) => {
         evt.preventDefault()
+        // props.submitStock(ticker);
+        submitStock(ticker)
         alert(`Submitting ${ticker}`)
     }
     return (
@@ -56,12 +62,14 @@ const StockSearch = () => {
                 placeholder="Enter Ticker Symbol (ex. AAPL)"
                 onChange={evt => setTicker(evt.target.value)}
             />
-            <TickerSubmitButton
-                type="submit"
-                name="ticker"
-                placeholder="Search Ticker"
-                onClick={handleSubmit}
-            />
+            <form onSubmit={handleSubmit}>
+                <TickerSubmitButton
+                    type="submit"
+                    name="ticker"
+                    placeholder="Search Ticker"
+                    // onSubmit={handleSubmit}
+                />
+            </form>
         </HeaderInput>
     )
 }
