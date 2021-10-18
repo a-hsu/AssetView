@@ -55,25 +55,14 @@ const Results = styled.div`
     justify-content: center;
 `
 
-const StockSearch = ({
-    submitStock,
-}: {
-    submitStock: (ticker: string) => void
-}) => {
+const StockSearch = () => {
     const [ticker, setTicker] = useState("")
     const [searchClicked, setSearchClicked] = useState(false)
 
     useEffect(() => {
-      console.log("clicked")
+        console.log("clicked")
     }, [searchClicked])
 
-    const handleSubmit = (evt: any) => {
-        evt.preventDefault()
-        // props.submitStock(ticker);
-        submitStock(ticker)
-        alert(`Submitting ${ticker}`)
-    }
-    
     return (
         <SearchBar>
             <Bar>
@@ -84,18 +73,15 @@ const StockSearch = ({
                     onMouseDown={evt => setSearchClicked(!searchClicked)}
                     onChange={evt => setTicker(evt.target.value)}
                 />
-                <form onSubmit={handleSubmit}>
-                    <Link to={`/stocks/ticker/${ticker}`}>
-                        <TickerSubmitButton
-                            type="submit"
-                            name="ticker"
-                            placeholder="Search Ticker"
-                            // onSubmit={handleSubmit}
-                        />
-                    </Link>
-                </form>
+                <Link to={`/stocks/ticker/${ticker}`}>
+                    <TickerSubmitButton
+                        type="submit"
+                        name="ticker"
+                        placeholder="Search Ticker"
+                    />
+                </Link>
             </Bar>
-            <Results>{searchClicked ? <h2>bye</h2> : <h2>hi</h2>}</Results>
+            {/* <Results>{searchClicked ? <h2>bye</h2> : <h2>hi</h2>}</Results> */}
         </SearchBar>
     )
 }

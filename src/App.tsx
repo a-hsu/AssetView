@@ -4,7 +4,7 @@ import "./App.css"
 import Home from "./pages/Home"
 import Stocks from "./pages/Stocks"
 import Chart from "./pages/Chart"
-import SingleStock from "./components/SingleStock"
+import SingleStock from "./pages/SingleStock"
 function App(props: any) {
     return (
         <Router>

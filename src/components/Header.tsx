@@ -31,7 +31,7 @@ const Header = () => {
     return (
         <StyledHeader>
             <Title>Getting Started</Title>
-                <StockSearch submitStock={submitStock} />
+            <StockSearch />
         </StyledHeader>
     )
 }
