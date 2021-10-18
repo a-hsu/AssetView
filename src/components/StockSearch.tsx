@@ -62,15 +62,18 @@ const StockSearch = ({
 }) => {
     const [ticker, setTicker] = useState("")
     const [searchClicked, setSearchClicked] = useState(false)
+
+    useEffect(() => {
+      console.log("clicked")
+    }, [searchClicked])
+
     const handleSubmit = (evt: any) => {
         evt.preventDefault()
         // props.submitStock(ticker);
         submitStock(ticker)
         alert(`Submitting ${ticker}`)
     }
-    useEffect(() => {
-        console.log("clicked")
-    }, [searchClicked])
+    
     return (
         <SearchBar>
             <Bar>
@@ -78,7 +81,7 @@ const StockSearch = ({
                     type="text"
                     name="ticker"
                     placeholder="Enter Ticker Symbol (ex. AAPL)"
-                    onClick={evt => setSearchClicked(!searchClicked)}
+                    onMouseDown={evt => setSearchClicked(!searchClicked)}
                     onChange={evt => setTicker(evt.target.value)}
                 />
                 <form onSubmit={handleSubmit}>
