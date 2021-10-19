@@ -87,7 +87,15 @@ const Login = styled.button`
 const Navbar = () => {
     return (
         <Nav>
-            <Title>AssetView</Title>
+            <NavLink
+                to="/"
+                activeClassName="current"
+                exact
+                style={{ textDecoration: "none" }}
+            >
+                {" "}
+                <Title>AssetView</Title>
+            </NavLink>
             <LinkBar>
                 <NavLink to="/watchlist" activeClassName="current" exact>
                     <LinkItem>Watchlist</LinkItem>

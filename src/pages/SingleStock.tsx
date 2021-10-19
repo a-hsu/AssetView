@@ -22,8 +22,8 @@ const SingleStock = () => {
     const [ticker, setTicker] = useState("")
     const [stockQuote, setStockQuote] = useState({})
 
-    // let slug = useLocation().pathname.substring(15)
-    // setTicker(slug)
+        // let slug = useLocation().pathname.substring(15)
+        // setTicker(slug)
 
     useEffect(() => {
         function getFetchCompanyUrl(ticker: string) {
@@ -42,18 +42,23 @@ const SingleStock = () => {
         }
 
         if (ticker.length !== 0) {
-            fetchData(ticker)
+            try {
+                fetchData(ticker)
+            } catch (error) {
+                console.error(error)
+            }
         }
     }, [ticker])
 
     const submitStock = (tickerSymbol: string) => {
+        console.log("submittedStock")
         setTicker(tickerSymbol)
     }
     return (
         <>
             <Navbar />
             <StyledSingleStock>
-                <StockSearch />
+                <StockSearch submitStock={submitStock} />
                 <StockData />
             </StyledSingleStock>
         </>

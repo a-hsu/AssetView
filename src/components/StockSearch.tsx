@@ -2,6 +2,8 @@ import styled from "@emotion/styled"
 import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 
+import { useHistory } from "react-router-dom"
+
 const TickerInput = styled.input`
     min-width: 350px;
     outline: none;
@@ -55,14 +57,21 @@ const Results = styled.div`
     justify-content: center;
 `
 
-const StockSearch = () => {
+const StockSearch = ({ submitStock }: any) => {
     const [ticker, setTicker] = useState("")
     const [searchClicked, setSearchClicked] = useState(false)
 
+    let history = useHistory()
     useEffect(() => {
-        console.log("clicked")
-    }, [searchClicked])
+        console.log("tickerChanged")
+    }, [ticker])
 
+    const handleSubmit = (e: any) => {
+        e.preventDefault()
+
+        history.push(`/stocks/ticker/${ticker}`)
+        console.log("submitted")
+    }
     return (
         <SearchBar>
             <Bar>
@@ -73,13 +82,13 @@ const StockSearch = () => {
                     onMouseDown={evt => setSearchClicked(!searchClicked)}
                     onChange={evt => setTicker(evt.target.value)}
                 />
-                <Link to={`/stocks/ticker/${ticker}`}>
+                <form onSubmit={handleSubmit}>
                     <TickerSubmitButton
                         type="submit"
                         name="ticker"
                         placeholder="Search Ticker"
                     />
-                </Link>
+                </form>
             </Bar>
             {/* <Results>{searchClicked ? <h2>bye</h2> : <h2>hi</h2>}</Results> */}
         </SearchBar>
